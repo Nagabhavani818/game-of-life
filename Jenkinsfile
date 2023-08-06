@@ -20,7 +20,7 @@ pipeline {
         }
         stage('Test results') {
             steps {
-                archiveArtifacts artifacts : '**/target/gameoflife-*.war'
+                archiveArtifacts artifacts : '**/target/gameoflife-*.jar'
                 junit testResults : '**/target/surefire-reports/TEST-*.xml'
             }
         }
